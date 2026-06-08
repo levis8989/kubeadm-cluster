@@ -49,6 +49,7 @@ sysctl --system
 
 # Comment La Linea de disabled crio to use kubernetes.
 sed -i '/disabled/s/^#*/#/g' /etc/containerd/config.toml
+systemctl restart containerd
 
 # Install Kubeadm.
 apt-get update
